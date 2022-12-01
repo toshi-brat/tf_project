@@ -11,6 +11,10 @@
   apt upgrade
   apt install nginx -y
   apt install docker.io -y
+  sleep 15
+  sudo groupadd docker
+  sudo usermod -aG docker $USER
+  newgrp docker
 
   EOF
 

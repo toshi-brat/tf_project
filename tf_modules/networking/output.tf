@@ -3,7 +3,7 @@ output "vpc-id" {
   }
 
 output "pub-snet-id" {
-value = aws_subnet.pub-snet
+value = {for k,v in aws_subnet.pub-snet: k => v.id}
 }
 
 output "pri-snet-id" {

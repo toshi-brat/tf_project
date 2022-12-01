@@ -12,7 +12,11 @@ variable "pub-id" {
 }
 variable "instance_type" {
   description = " desired instance type"
+  type = string
+  
+ 
 }
+
 variable "key-pair" {
   description = "name of the key to ssh into instance"
 }

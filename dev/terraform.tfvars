@@ -60,21 +60,40 @@ sg_details = {
 
       ]
     },
-    "alb-sg" = {
-      description = "httpd inbound"
+    "mysql-sg" = {
+      description = "mysql communication"
       name        = "lb-sg"
       ingress_rules = [
         {
           cidr_blocks     = ["0.0.0.0/0"]
-          from_port       = 80
+          from_port       = 3306
           protocol        = "tcp"
           self            = null
-          to_port         = 80
+          to_port         = 3306
+          security_groups = null
+    }] },
+    "docker-sg" = {
+      description = "docker swarm"
+      name        = "lb-sg"
+      ingress_rules = [
+        {
+          cidr_blocks     = ["0.0.0.0/0"]
+          from_port       = 2377
+          protocol        = "tcp"
+          self            = null
+          to_port         = 2377
           security_groups = null
     }] }
+
   }
 
 ####### INSTANCE DETAILS ######
 ami = "ami-062df10d14676e201"
-instance_type = "t2.micro"
+instance_type = "t2.nano"
 key-pair = "key-nv-pair"
+
+####################
+# DNS Variables
+####################
+
+domain_name = "example.com"
