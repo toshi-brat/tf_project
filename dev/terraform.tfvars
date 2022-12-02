@@ -88,7 +88,7 @@ sg_details = {
   }
 
 ####### INSTANCE DETAILS ######
-ami = "ami-062df10d14676e201"
+ami = "ami-07651f0c4c315a529"
 instance_type = "t2.micro"
 key-pair = "key-nv-pair"
 
