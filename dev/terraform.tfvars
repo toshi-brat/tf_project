@@ -62,7 +62,7 @@ sg_details = {
     },
     "mysql-sg" = {
       description = "mysql communication"
-      name        = "lb-sg"
+      name        = "mysql-sg"
       ingress_rules = [
         {
           cidr_blocks     = ["0.0.0.0/0"]
@@ -74,7 +74,7 @@ sg_details = {
     }] },
     "docker-sg" = {
       description = "docker swarm"
-      name        = "lb-sg"
+      name        = "docker-sg"
       ingress_rules = [
         {
           cidr_blocks     = ["0.0.0.0/0"]
