@@ -1,4 +1,5 @@
 provider "aws" {
-  region = "ap-south-1"
-  profile = "default"
+  region = "ap-southeast-1"
+  #shared_credentials_files = ["home/toshi/.aws/credentials"]
 }
+

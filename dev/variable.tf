@@ -64,10 +64,10 @@ variable "ami" {
 }
 variable "instance_type" {
   description = " desired instance type"
-   validation {
-    condition = can(regex("^[Tt][2].[micro])",var.instance_type))
-    error_message = "Invalid Instance type can be onlt t2.micro"
-  }
+  #  validation {
+  #   condition = can(regex("^[Tt][2].[micro])",var.instance_type))
+  #   error_message = "Invalid Instance type can be only t2.micro"
+  #}
 }
 variable "key-pair" {
   description = "name of the key to ssh into instance"
@@ -83,7 +83,7 @@ variable "key-pair" {
 # DNS Variables
 ################
 
-variable "domain_name" {
-  description = "Desired Private Hosted Zone Name"
-  type = string
-}
+# variable "domain_name" {
+#   description = "Desired Private Hosted Zone Name"
+#   type = string
+# }

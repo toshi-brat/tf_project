@@ -12,11 +12,24 @@
   apt install nginx -y
   apt install docker.io -y
   sleep 15
+  exit
   sudo groupadd docker
   sudo usermod -aG docker $USER
   newgrp docker
+  sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+  systemctl restart sshd.service
+  echo -e "toshi\ntoshi" |passwd ubuntu 
+  hostnamectl set-hostname ${each.value["name"]}
 
   EOF
+
+ tags =  merge({
+    # Envirenment = var.environment 
+    # BuildBy = var.buildby
+    Name ="EC2-${each.value["name"]}"
+
+  })
+
 
  }
  

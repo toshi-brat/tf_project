@@ -9,29 +9,29 @@ nat-pub-id = "s1"
 pub-snet = {
     s1 = {
       cidr_block        = "10.0.0.0/23"
-      availability_zone = "ap-south-1a"
+      availability_zone = "ap-southeast-1a"
     },
     s2 = {
       cidr_block        = "10.0.2.0/23"
-      availability_zone = "ap-south-1b"
+      availability_zone = "ap-southeast-1b"
     }
     s3 = {
       cidr_block        = "10.0.4.0/22"
-      availability_zone = "ap-south-1c" 
+      availability_zone = "ap-southeast-1c" 
     }
   }
 pri-snet = {
     ps1 = {
       cidr_block        = "10.0.8.0/23"
-      availability_zone = "ap-south-1a"
+      availability_zone = "ap-southeast-1a"
     },
     ps2 = {
       cidr_block        = "10.0.10.0/23"
-      availability_zone = "ap-south-1b"
+      availability_zone = "ap-southeast-1b"
     }
     ps3 = {
       cidr_block        = "10.0.12.0/22"
-      availability_zone = "ap-south-1c" 
+      availability_zone = "ap-southeast-1c" 
     }
   }
 
@@ -89,11 +89,11 @@ sg_details = {
 
 ####### INSTANCE DETAILS ######
 ami = "ami-062df10d14676e201"
-instance_type = "t2.nano"
+instance_type = "t2.micro"
 key-pair = "key-nv-pair"
 
 ####################
 # DNS Variables
 ####################
 
-domain_name = "example.com"
+# domain_name = "example.com"

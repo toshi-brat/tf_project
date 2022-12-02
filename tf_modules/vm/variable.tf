@@ -8,6 +8,7 @@ variable "ami" {
 variable "pub-id" {
     type = map(object({
     subnet_id = string
+    name = string
     })  )
 }
 variable "instance_type" {
@@ -20,3 +21,8 @@ variable "instance_type" {
 variable "key-pair" {
   description = "name of the key to ssh into instance"
 }
+
+# variable "hostname" {
+#   description = "enter the desired hostname"
+#   type =string
+# }
