@@ -1,4 +1,4 @@
 locals {
   environment = var.environment
-  buildby = var.buildby
+  buildby     = var.buildby
 }
